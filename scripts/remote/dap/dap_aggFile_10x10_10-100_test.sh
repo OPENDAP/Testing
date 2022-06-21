@@ -3,7 +3,7 @@
 
 # Variables to be changed
 # /////////////////////////////////////////
-DAP_REQUEST="dap" # return type
+REQUEST_TYPE="dap" # return type
 REGION_SIZE="5000:5009" # region size for curl cmd
 OUTPUT_SIZE="10x10" # human readable size
 # /////////////////////////////////////////
@@ -12,7 +12,7 @@ SERVER_ENDPOINT="http://ngap-west.opendap.org:8080/opendap/"
 DATASET_PATH="agg/ghrsst_mur_agg_100time.dmrpp"
 DATASET_URL="${SERVER_ENDPOINT}${DATASET_PATH}"
 
-FULL_URL="${DATASET_URL}.${DAP_REQUEST}"
+FULL_URL="${DATASET_URL}.${REQUEST_TYPE}"
 echo "FULL_URL: ${FULL_URL}"
 
 10T_CE="dap4.ce=/analysed_sst[0:1:9][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:9]"
@@ -30,7 +30,7 @@ CE_LIST="${10T_CE} ${20T_CE} ${30T_CE} ${40T_CE} ${50T_CE} ${60T_CE} ${70T_CE} $
 
 COOKIES_FILE="/home/centos/ursCookies"
 CURL_CMD="curl -n -c ${COOKIES_FILE} -b ${COOKIES_FILE} -L"
-RESULTS_FILE="dap_${OUTPUT_SIZE}_10-100_results.txt"
+RESULTS_FILE="${REQUEST_TYPE}_${OUTPUT_SIZE}_10-100_results.txt"
 
 TIME=10
 
