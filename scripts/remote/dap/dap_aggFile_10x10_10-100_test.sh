@@ -1,150 +1,59 @@
-#!/bin/sh
+#!/bin/bash
 #
 
+# Variables to be changed
+# /////////////////////////////////////////
+DAP_REQUEST="dap" # return type
+REGION_SIZE="5000:5009" # region size for curl cmd
+OUTPUT_SIZE="10x10" # human readable size
+# /////////////////////////////////////////
+
 SERVER_ENDPOINT="http://ngap-west.opendap.org:8080/opendap/"
-DATASET_PATH="agg/ghrsst_mur_agg_100time.dmrpp.dap"
-FULL_URL="${SERVER_ENDPOINT}${DATASET_PATH}"
+DATASET_PATH="agg/ghrsst_mur_agg_100time.dmrpp"
+DATASET_URL="${SERVER_ENDPOINT}${DATASET_PATH}"
 
-COOKIES_FILE="~/ursCookies"
+FULL_URL="${DATASET_URL}.${DAP_REQUEST}"
+echo "FULL_URL: ${FULL_URL}"
+
+10T_CE="dap4.ce=/analysed_sst[0:1:9][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:9]"
+20T_CE="dap4.ce=/analysed_sst[0:1:19][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:19]"
+30T_CE="dap4.ce=/analysed_sst[0:1:29][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:29]"
+40T_CE="dap4.ce=/analysed_sst[0:1:39][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:39]"
+50T_CE="dap4.ce=/analysed_sst[0:1:49][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:49]"
+60T_CE="dap4.ce=/analysed_sst[0:1:59][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:59]"
+70T_CE="dap4.ce=/analysed_sst[0:1:69][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:69]"
+80T_CE="dap4.ce=/analysed_sst[0:1:79][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:79]"
+90T_CE="dap4.ce=/analysed_sst[0:1:89][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:89]"
+100T_CE="dap4.ce=/analysed_sst[0:1:99][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:99]"
+
+CE_LIST="${10T_CE} ${20T_CE} ${30T_CE} ${40T_CE} ${50T_CE} ${60T_CE} ${70T_CE} ${80T_CE} ${90T_CE} ${100T_CE}"
+
+COOKIES_FILE="/home/centos/ursCookies"
 CURL_CMD="curl -n -c ${COOKIES_FILE} -b ${COOKIES_FILE} -L"
-RESULTS_FILE="dap_10x10_10-100_results.txt"
+RESULTS_FILE="dap_${OUTPUT_SIZE}_10-100_results.txt"
 
-for i in {1..10}; 
+TIME=10
+
+for ce in ${CE_LIST}
     do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:9][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:9]" "${FULL_URL}";
-    } 2>> result.txt;  
-    echo ""; echo "========== 10.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 10 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
+        echo =========================================================================================;
+        echo ${FULL_URL}?${ce};
+        CE=$(echo "${ce}" | sed -e "s/\[/%5B/g" -e "s/\]/%5D/g")
+        REQUEST_URL="${FULL_URL}?${CE}"
 
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:19][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:19]" "${FULL_URL}";
-    } 2>> result.txt;  
-    echo ""; echo "========== 20.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 20 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:29][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:29]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 30.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 30 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:39][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:39]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 40.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 40 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:49][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:49]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 50.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 50 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:59][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:59]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 60.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 60 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:69][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:69]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 70.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 70 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:79][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:79]" "${FULL_URL}";
-    } 2>> result.txt; 
-    echo ""; echo "========== 80.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 80 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:89][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:89]" "${FULL_URL}";
-    } 2>> result.txt;  
-    echo ""; echo "========== 90.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 90 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
-echo =========================================================================================;
-
-for i in {1..10}; 
-    do {
-        rm ${COOKIES_FILE};
-        time -p ${CURL_CMD} --data-urlencode "dap4.ce=/analysed_sst[0:1:99][5000:5009][5000:5009];/lat[5000:5009];/lon[5000:5009];/time[0:1:99]" "${FULL_URL}";
-    } 2>> result.txt;  
-    echo ""; echo "========== 100.$i ==========";
-done; 
-echo "" >> ${RESULTS_FILE};
-echo "10x10 - time 100 ..." >> ${RESULTS_FILE};
-grep real result.txt | cat >> ${RESULTS_FILE};
-rm result.txt;
-
+        for i in {1..10};
+            do {
+                echo ""; echo "========== ${TIME}.${i} ==========";
+                rm ${COOKIES_FILE};
+                time -p ${CURL_CMD} "${REQUEST_URL}";
+            } 2>> results.txt;
+            echo ""; echo "==================================";
+        done;
+        echo "" | tee -a ${RESULTS_FILE};
+        echo "${OUTPUT_SIZE} - time ${TIME} ..." | tee -a ${RESULTS_FILE};
+        grep real results.txt | tee -a ${RESULTS_FILE};
+        rm results.txt;
+    }
+    ((TIME=TIME+10))
+    done;
 echo =========================================================================================;
