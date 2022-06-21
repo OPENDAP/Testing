@@ -1,19 +1,16 @@
 #!/bin/bash
 #
 
-# Variables to be changed
-# /////////////////////////////////////////
-REQUEST_TYPE="dap" # return type
-REGION_SIZE="5000:5099" # region size for curl cmd
-OUTPUT_SIZE="100x100" # human readable size
-# /////////////////////////////////////////
-
 SERVER_ENDPOINT="http://ngap-west.opendap.org:8080/opendap/"
 DATASET_PATH="agg/ghrsst_mur_agg_100time.dmrpp"
 DATASET_URL="${SERVER_ENDPOINT}${DATASET_PATH}"
+REQUEST_TYPE="dap" # return type
 
 FULL_URL="${DATASET_URL}.${REQUEST_TYPE}"
 echo "FULL_URL: ${FULL_URL}"
+
+REGION_SIZE="5000:5099" # region size for curl cmd
+OUTPUT_SIZE="100x100" # human readable size
 
 10T_CE="dap4.ce=/analysed_sst[0:1:9][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:9]"
 20T_CE="dap4.ce=/analysed_sst[0:1:19][${REGION_SIZE}][${REGION_SIZE}];/lat[${REGION_SIZE}];/lon[${REGION_SIZE}];/time[0:1:19]"
