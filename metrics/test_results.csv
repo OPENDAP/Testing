@@ -1,0 +1,52 @@
+Date,# Tests,# Workers,Delay,All DAP Tests,Readable Time,Raw Time,Average Test Time,DMR Fails,DAP Fails,Url
+PROD,,,,,,,,,,
+2024-06-11,10,2,0,False [2x tests],27.86 secs,27.86,1.39,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,4,0,False [2x tests],11.87 secs,11.87,0.59,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,8,0,False [2x tests],6.44 secs,6.44,0.32,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,10,0,False [2x tests],5.21 secs,5.21,0.26,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,2,0,True  [6x tests],56.56 secs,56.56,0.94,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,4,0,True  [6x tests],34.81 secs,34.81,0.58,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,8,0,True  [6x tests],21.97 secs,21.97,0.37,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,10,10,0,True  [6x tests],15.6 secs,15.6,0.26,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,2,0,False [2x tests],"3 mins, 29.13 secs",209.13,1.05,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,4,0,False [2x tests],"1 mins, 52.51 secs",112.51,0.56,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,8,0,False [2x tests],50.17 secs,50.17,0.25,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,10,0,False [2x tests],33.87 secs,33.87,0.17,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,2,0,True  [6x tests],"27 mins, 21.36 secs",1641.36,2.74,0,2,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,4,0,True  [6x tests],"17 mins, 18.99 secs",1038.99,1.73,0,15,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,8,0,True  [6x tests],"7 mins, 15.5 secs",435.5,0.73,0,3,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,100,10,0,True  [6x tests],"7 mins, 23.36 secs",443.36,0.74,0,19,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,2,0,False [2x tests],"2 hours, 16 mins, 26.28 secs",8186.28,4.09,40,27,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,4,0,False [2x tests],"28 mins, 5.88 secs",1685.88,0.84,0,3,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,8,0,False [2x tests],"13 mins, 21.95 secs",801.95,0.4,0,1,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,10,0,False [2x tests],"11 mins, 43.25 secs",703.25,0.35,0,9,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,2,0,True  [6x tests],"2 hours, 9 mins, 33.69 secs",7773.69,1.3,1,40,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,4,0,True  [6x tests],"2 hours, 56 mins, 56.24 secs",10616.24,1.77,6,491,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,8,0,True  [6x tests],"44 mins, 35.53 secs",2675.53,0.45,0,8,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-11,1000,10,0,True  [6x tests],"21 mins, 27.88 secs",1287.88,0.21,0,0,https://opendap.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+SIT,,,,,,,,,,
+2024-06-12,1,2,0,False [2x tests],17.15 secs,17.15,8.58,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,2,0,False [2x tests],30.39 secs,30.39,1.52,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,4,0,False [2x tests],16.58 secs,16.58,0.83,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,8,0,False [2x tests],11.05 secs,11.05,0.55,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,10,0,False [2x tests],8.01 secs,8.01,0.4,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,2,0,True  [6x tests],"1 mins, 24.46 secs",84.46,1.41,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,4,0,True  [6x tests],56.05 secs,56.05,0.93,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,8,0,True  [6x tests],38.36 secs,38.36,0.64,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,10,10,0,True  [6x tests],20.07 secs,20.07,0.33,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,2,0,False [2x tests],"5 mins, 3.93 secs",303.93,1.52,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,4,0,False [2x tests],"2 mins, 24.81 secs",144.81,0.72,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,8,0,False [2x tests],"1 mins, 18.59 secs",78.59,0.39,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,10,0,False [2x tests],58.87 secs,58.87,0.29,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,2,0,True  [6x tests],"14 mins, 35.33 secs",875.33,1.46,0,1,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,4,0,True  [6x tests],"7 mins, 26.09 secs",446.09,0.74,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,8,0,True  [6x tests],"3 mins, 35.82 secs",215.82,0.36,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,100,10,0,True  [6x tests],"3 mins, 6.2 secs",186.2,0.31,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,2,0,False [2x tests],"54 mins, 13.03 secs",3253.03,1.63,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,4,0,False [2x tests],"25 mins, 8.82 secs",1508.82,0.75,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,8,0,False [2x tests],"12 mins, 21.73 secs",741.73,0.37,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,10,0,False [2x tests],"9 mins, 17.22 secs",557.22,0.28,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,2,0,True  [6x tests],"2 hours, 40 mins, 21.95 secs",9621.95,1.6,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,4,0,True  [6x tests],"1 hours, 21 mins, 40.52 secs",4900.52,0.82,0,1,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,8,0,True  [6x tests],"37 mins, 27.29 secs",2247.29,0.37,0,1,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
+2024-06-12,1000,10,0,True  [6x tests],"30 mins, 54.91 secs",1854.91,0.31,0,0,https://opendap.sit.earthdata.nasa.gov/collections/C2075141559-POCLOUD/granules/ascat_20121029_010001_metopb_00588_eps_o_250_2101_ovw.l2
